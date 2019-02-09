@@ -159,7 +159,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgw-Pj-bTD">
                                         <state key="normal" title="+ Add Contacts"/>
                                         <connections>
-                                            <action selector="addTest:" destination="WdV-oX-o8p" eventType="touchUpInside" id="p3o-js-qcq"/>
+                                            <action selector="addContact:" destination="WdV-oX-o8p" eventType="touchUpInside" id="7WQ-qW-1w5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -179,17 +179,17 @@
                     <connections>
                         <outlet property="contactsStackView" destination="20H-z2-JTB" id="eGD-HL-mbv"/>
                         <outlet property="trailSafeActivateButton" destination="3V2-HR-GFQ" id="Itt-un-iqu"/>
-                        <segue destination="wUs-eo-Arn" kind="show" id="W8u-Oy-lNx"/>
+                        <segue destination="wUs-eo-Arn" kind="show" identifier="contactForm" id="W8u-Oy-lNx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NT-Qj-tm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1713" y="2355"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Contact View Controller-->
         <scene sceneID="sJ5-4h-Tbt">
             <objects>
-                <viewController id="wUs-eo-Arn" sceneMemberID="viewController">
+                <viewController id="wUs-eo-Arn" customClass="AddContactViewController" customModule="CaleIOSResume" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tAC-IF-vGu"/>
                         <viewControllerLayoutGuide type="bottom" id="bOi-mi-SDL"/>
@@ -197,12 +197,33 @@
                     <view key="view" contentMode="scaleToFill" id="7Cm-qf-Mqk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ikl-qz-SnX">
+                                <frame key="frameInset" minX="71" minY="323" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-MM-hu2">
+                                <frame key="frameInset" minX="71" minY="361" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="wUs-eo-Arn" eventType="touchUpInside" id="I2G-zL-5uy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="ikl-qz-SnX" id="Mu1-Cc-Fcw"/>
+                        <segue destination="WdV-oX-o8p" kind="show" identifier="returnToTrailSafe" id="lSh-wI-h0z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M9-tc-HIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712" y="3080"/>
+            <point key="canvasLocation" x="928" y="3103"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UHa-s4-wzx">
@@ -287,4 +308,7 @@
         <image name="map-pin" width="30" height="30"/>
         <image name="mountain" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lSh-wI-h0z"/>
+    </inferredMetricsTieBreakers>
 </document>

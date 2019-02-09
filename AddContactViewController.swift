@@ -10,6 +10,8 @@ import UIKit
 
 class AddContactViewController: UIViewController {
 
+    @IBOutlet weak var nameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +24,9 @@ class AddContactViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func submitButton(_ sender: AnyObject) {
+        print(nameField.text)
+        performSegue(withIdentifier: "returnToTrailSafe", sender: nil)
     }
-    */
 
 }
