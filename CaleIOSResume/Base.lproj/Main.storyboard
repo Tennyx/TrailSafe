@@ -151,7 +151,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3V2-HR-GFQ"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3V2-HR-GFQ">
+                                        <connections>
+                                            <action selector="toggleTrailSafe:" destination="WdV-oX-o8p" eventType="valueChanged" id="hZc-U0-qJb"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="20H-z2-JTB" userLabel="Contacts Stack View">
@@ -167,24 +171,116 @@
                                     <constraint firstAttribute="width" constant="300" id="CG0-hk-c9X"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HIv-Nb-bym" userLabel="Info Stack View">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trail Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46j-kA-jBa">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbA-GL-307">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5y-Lg-BwO">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9c-cH-l67">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return Time Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on4-ZZ-qGs">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02C-we-mUq">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="20H-z2-JTB" firstAttribute="top" secondItem="hYO-qX-VdC" secondAttribute="bottom" constant="36.5" id="F3i-DH-naH"/>
+                            <constraint firstItem="HIv-Nb-bym" firstAttribute="centerX" secondItem="dAC-d3-UbU" secondAttribute="centerX" id="2ps-UE-Kjt"/>
+                            <constraint firstItem="20H-z2-JTB" firstAttribute="top" secondItem="hYO-qX-VdC" secondAttribute="bottom" constant="20" id="F3i-DH-naH"/>
                             <constraint firstItem="20H-z2-JTB" firstAttribute="centerX" secondItem="dAC-d3-UbU" secondAttribute="centerX" id="FDe-wd-cRT"/>
                             <constraint firstItem="hYO-qX-VdC" firstAttribute="top" secondItem="nuS-KD-WJH" secondAttribute="bottom" constant="8" id="Hzt-r9-G2K"/>
+                            <constraint firstItem="HIv-Nb-bym" firstAttribute="top" secondItem="20H-z2-JTB" secondAttribute="bottom" constant="15.67" id="TCO-lw-pA9"/>
                             <constraint firstItem="hYO-qX-VdC" firstAttribute="centerX" secondItem="dAC-d3-UbU" secondAttribute="centerX" id="gec-aZ-cSM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addContactButton" destination="qgw-Pj-bTD" id="d3B-5C-X4u"/>
                         <outlet property="contactsStackView" destination="20H-z2-JTB" id="eGD-HL-mbv"/>
                         <outlet property="trailSafeActivateButton" destination="3V2-HR-GFQ" id="Itt-un-iqu"/>
                         <segue destination="wUs-eo-Arn" kind="show" identifier="contactForm" id="W8u-Oy-lNx"/>
+                        <segue destination="b1f-5x-RoI" kind="show" identifier="contactView" id="I7U-se-p5C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NT-Qj-tm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1713" y="2355"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="5GZ-qG-osI">
+            <objects>
+                <viewController id="b1f-5x-RoI" customClass="ContactsViewController" customModule="CaleIOSResume" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KG1-IV-X3i"/>
+                        <viewControllerLayoutGuide type="bottom" id="NAW-hX-st0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P7I-S8-q41">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubj-Tt-81f">
+                                <frame key="frameInset" minX="162" minY="249" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSF-F7-JZc">
+                                <frame key="frameInset" minX="160" minY="278" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-FY-TnK">
+                                <frame key="frameInset" minX="164" minY="307" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-84-bvb">
+                                <frame key="frameInset" minX="192" minY="353" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <segue destination="wUs-eo-Arn" kind="show" id="e3Y-DW-Cr3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="Daq-FY-TnK" id="UNS-iA-2GN"/>
+                        <outlet property="nameLabel" destination="Ubj-Tt-81f" id="9cp-5O-cgm"/>
+                        <outlet property="phoneLabel" destination="HSF-F7-JZc" id="lzC-2w-BfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjx-po-YsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529" y="3103"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="sJ5-4h-Tbt">
@@ -206,29 +302,45 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFp-MM-hu2">
-                                <frame key="frameInset" minX="71" minY="361" width="273" height="30"/>
+                                <frame key="frameInset" minX="71" minY="436" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitButton:" destination="wUs-eo-Arn" eventType="touchUpInside" id="I2G-zL-5uy"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zmO-y5-YLA">
+                                <frame key="frameInset" minX="71" minY="361" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5c-FR-nmc">
+                                <frame key="frameInset" minX="71" minY="398" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="a5c-FR-nmc" id="la0-xY-Kp3"/>
                         <outlet property="nameField" destination="ikl-qz-SnX" id="Mu1-Cc-Fcw"/>
+                        <outlet property="phoneField" destination="zmO-y5-YLA" id="9cI-fN-axe"/>
                         <segue destination="WdV-oX-o8p" kind="show" identifier="returnToTrailSafe" id="lSh-wI-h0z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M9-tc-HIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="3103"/>
+            <point key="canvasLocation" x="927.536231884058" y="3102.717391304348"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Custom Tab Controller-->
         <scene sceneID="UHa-s4-wzx">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WUH-u0-qoz" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WUH-u0-qoz" customClass="MyCustomTabController" customModule="CaleIOSResume" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="1bE-43-j3t">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -310,5 +422,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lSh-wI-h0z"/>
+        <segue reference="W8u-Oy-lNx"/>
     </inferredMetricsTieBreakers>
 </document>

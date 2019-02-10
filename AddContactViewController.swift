@@ -9,24 +9,42 @@
 import UIKit
 
 class AddContactViewController: UIViewController {
-
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    
+    var contactsIndex = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        prefillInputs(contactIndex: contactsIndex)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     @IBAction func submitButton(_ sender: AnyObject) {
-        print(nameField.text)
+        let contactName = ContactObject(contactName: nameField.text!, contactPhone: phoneField.text!, contactEmail: emailField.text! )
+        
+        if contactsIndex >= 0 {
+            MyCustomTabController.contactsData[contactsIndex] = contactName
+        }
+        else {
+            MyCustomTabController.contactsData.append(contactName as ContactObject)
+        }
         performSegue(withIdentifier: "returnToTrailSafe", sender: nil)
+    }
+    
+    func prefillInputs(contactIndex: Int){
+        if contactIndex >= 0 {
+            let contactObject = MyCustomTabController.contactsData[contactsIndex]
+            
+            nameField.text = contactObject.contactName
+            phoneField.text = contactObject.contactPhone
+            emailField.text = contactObject.contactEmail
+        }
     }
 
 }
