@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CaleIOSResume.xcodeproj">
+      location = "self:/Users/EDIT_04/Documents/WEBAPP/ios/TrailSafe/TrailSafe.xcodeproj">
    </FileRef>
 </Workspace>

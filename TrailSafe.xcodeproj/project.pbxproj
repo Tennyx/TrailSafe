@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E0BADDC220DFF6600F90AC8 /* CaleIOSResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaleIOSResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0BADDC220DFF6600F90AC8 /* TrailSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0BADDF220DFF6600F90AC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E0BADE1220DFF6600F90AC8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8E0BADE4220DFF6600F90AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,7 +28,7 @@
 		8E0BADE9220DFF6600F90AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E0BADEB220DFF6600F90AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E0BADF1220E0CA400F90AC8 /* TrailSafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailSafeViewController.swift; sourceTree = "<group>"; };
-		8EF8127B220F33D000C6C751 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactViewController.swift; path = ../AddContactViewController.swift; sourceTree = "<group>"; };
+		8EF8127B220F33D000C6C751 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactViewController.swift; path = CaleIOSResume/AddContactViewController.swift; sourceTree = SOURCE_ROOT; };
 		8EF8127D220F40CE00C6C751 /* MyCustomTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTabController.swift; sourceTree = "<group>"; };
 		8EF8127F220F8FEB00C6C751 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		8EF812812210D7CF00C6C751 /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		8E0BADD3220DFF6600F90AC8 = {
 			isa = PBXGroup;
 			children = (
-				8E0BADDE220DFF6600F90AC8 /* CaleIOSResume */,
+				8E0BADDE220DFF6600F90AC8 /* TrailSafe */,
 				8E0BADDD220DFF6600F90AC8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +56,12 @@
 		8E0BADDD220DFF6600F90AC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E0BADDC220DFF6600F90AC8 /* CaleIOSResume.app */,
+				8E0BADDC220DFF6600F90AC8 /* TrailSafe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E0BADDE220DFF6600F90AC8 /* CaleIOSResume */ = {
+		8E0BADDE220DFF6600F90AC8 /* TrailSafe */ = {
 			isa = PBXGroup;
 			children = (
 				8EF8127B220F33D000C6C751 /* AddContactViewController.swift */,
@@ -76,15 +76,15 @@
 				8E0BADE8220DFF6600F90AC8 /* LaunchScreen.storyboard */,
 				8E0BADEB220DFF6600F90AC8 /* Info.plist */,
 			);
-			path = CaleIOSResume;
+			path = TrailSafe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E0BADDB220DFF6600F90AC8 /* CaleIOSResume */ = {
+		8E0BADDB220DFF6600F90AC8 /* TrailSafe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E0BADEE220DFF6600F90AC8 /* Build configuration list for PBXNativeTarget "CaleIOSResume" */;
+			buildConfigurationList = 8E0BADEE220DFF6600F90AC8 /* Build configuration list for PBXNativeTarget "TrailSafe" */;
 			buildPhases = (
 				8E0BADD8220DFF6600F90AC8 /* Sources */,
 				8E0BADD9220DFF6600F90AC8 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = CaleIOSResume;
+			name = TrailSafe;
 			productName = CaleIOSResume;
-			productReference = 8E0BADDC220DFF6600F90AC8 /* CaleIOSResume.app */;
+			productReference = 8E0BADDC220DFF6600F90AC8 /* TrailSafe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E0BADD7220DFF6600F90AC8 /* Build configuration list for PBXProject "CaleIOSResume" */;
+			buildConfigurationList = 8E0BADD7220DFF6600F90AC8 /* Build configuration list for PBXProject "TrailSafe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -128,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E0BADDB220DFF6600F90AC8 /* CaleIOSResume */,
+				8E0BADDB220DFF6600F90AC8 /* TrailSafe */,
 			);
 		};
 /* End PBXProject section */
@@ -280,9 +280,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CaleIOSResume/Info.plist;
+				INFOPLIST_FILE = TrailSafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cale.CaleIOSResume;
+				PRODUCT_BUNDLE_IDENTIFIER = cale.TrailSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -292,9 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CaleIOSResume/Info.plist;
+				INFOPLIST_FILE = TrailSafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cale.CaleIOSResume;
+				PRODUCT_BUNDLE_IDENTIFIER = cale.TrailSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -303,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E0BADD7220DFF6600F90AC8 /* Build configuration list for PBXProject "CaleIOSResume" */ = {
+		8E0BADD7220DFF6600F90AC8 /* Build configuration list for PBXProject "TrailSafe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E0BADEC220DFF6600F90AC8 /* Debug */,
@@ -312,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E0BADEE220DFF6600F90AC8 /* Build configuration list for PBXNativeTarget "CaleIOSResume" */ = {
+		8E0BADEE220DFF6600F90AC8 /* Build configuration list for PBXNativeTarget "TrailSafe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E0BADEF220DFF6600F90AC8 /* Debug */,
