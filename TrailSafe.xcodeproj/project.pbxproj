@@ -28,7 +28,7 @@
 		8E0BADE9220DFF6600F90AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E0BADEB220DFF6600F90AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E0BADF1220E0CA400F90AC8 /* TrailSafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailSafeViewController.swift; sourceTree = "<group>"; };
-		8EF8127B220F33D000C6C751 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactViewController.swift; path = CaleIOSResume/AddContactViewController.swift; sourceTree = SOURCE_ROOT; };
+		8EF8127B220F33D000C6C751 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactViewController.swift; path = TrailSafe/AddContactViewController.swift; sourceTree = SOURCE_ROOT; };
 		8EF8127D220F40CE00C6C751 /* MyCustomTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTabController.swift; sourceTree = "<group>"; };
 		8EF8127F220F8FEB00C6C751 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		8EF812812210D7CF00C6C751 /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };

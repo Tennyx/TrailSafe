@@ -26,46 +26,7 @@ class TrailSafeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true)
-        errorLabel.text = ""
-        trailSafeActivateButton.isOn = false
-        
-        let contactsArray = MyCustomTabController.contactsData
-        
-        if MyCustomTabController.contactsData.count >= 5 {
-            addContactButton.isEnabled = false
-        }
-        
-        
-        var indexArray = 0
-        
-        for contact in contactsArray{
-            let newSwitch = UISwitch()
-            let newName = UIButton()
-            let stackViewRow = UIStackView()
-            
-            newName.tag = indexArray
-            newName.setTitle(contact.contactName, for: .normal)
-            newName.setTitleColor(UIColor.black, for: .normal)
-            newName.addTarget(self, action: #selector(setIndex(_:)), for: UIControlEvents.touchUpInside)
-            newName.contentHorizontalAlignment = .left
-            
-            newSwitch.tag = indexArray
-            newSwitch.isOn = MyCustomTabController.contactsData[indexArray].isOn
-            newSwitch.addTarget(self, action: #selector(contactSwitchToggle(_:)), for: UIControlEvents.touchUpInside)
-            
-            stackViewRow.addArrangedSubview(newSwitch)
-            stackViewRow.addArrangedSubview(newName)
-            stackViewRow.spacing = 20
-            contactsStackView.addArrangedSubview(stackViewRow)
-            indexArray += 1
-        }
-        
-        nameLabel.text = MyCustomTabController.trailName
-        locationLabel.text = MyCustomTabController.trailLocation
-        peopleLabel.text = MyCustomTabController.trailPeople
-        returnTimeLabel.text = MyCustomTabController.trailReturnTime
-        descriptionLabel.text = MyCustomTabController.trailDescription
-        
+        updateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,9 +40,9 @@ class TrailSafeViewController: UIViewController {
     @IBAction func toggleTrailSafe(_ sender: AnyObject) {
         if trailSafeActivateButton.isOn {
             if anySwitchesOn() && trailInfoComplete(){
-                print("all good")
-                addContactButton.isEnabled = false
                 editTrailInfoButton.isEnabled = false
+                contactsStackView.isUserInteractionEnabled = false
+                addContactButton.isEnabled = false
             }
             else {
                 errorLabel.text = "Toggle at least 1 contact and fill out trail info."
@@ -89,9 +50,69 @@ class TrailSafeViewController: UIViewController {
             }
         }
         else {
-            addContactButton.isEnabled = true
+            contactsStackView.isUserInteractionEnabled = true
+            if MyCustomTabController.contactsData.count < 5 {
+                addContactButton.isEnabled = true
+            }
             editTrailInfoButton.isEnabled = true
+            
         }
+    }
+    
+    func updateUI(){
+        errorLabel.text = ""
+        trailSafeActivateButton.isOn = false
+        
+        if MyCustomTabController.contactsData.count >= 5 {
+            addContactButton.isEnabled = false
+        }
+        else{
+            addContactButton.isEnabled = true
+        }
+        
+        let contactsArray = MyCustomTabController.contactsData
+        var indexArray = 0
+        for view in contactsStackView.subviews {
+            if view.tag != 1 {
+                view.removeFromSuperview()
+            }
+        }
+        for contact in contactsArray{
+            let newSwitch = UISwitch()
+            let newName = UIButton()
+            let deleteButton = UIButton()
+            let stackViewRow = UIStackView()
+            
+            newName.tag = indexArray
+            newName.setTitle(contact.contactName, for: .normal)
+            newName.setTitleColor(UIColor(red:0.22, green:0.62, blue:0.21, alpha:1.0), for: .normal)
+            newName.addTarget(self, action: #selector(setIndex(_:)), for: UIControlEvents.touchUpInside)
+            newName.contentHorizontalAlignment = .left
+            
+            newSwitch.tag = indexArray
+            newSwitch.isOn = MyCustomTabController.contactsData[indexArray].isOn
+            newSwitch.onTintColor = UIColor(red:0.22, green:0.62, blue:0.21, alpha:1.0)
+            newSwitch.addTarget(self, action: #selector(contactSwitchToggle(_:)), for: UIControlEvents.touchUpInside)
+            
+            deleteButton.tag = indexArray
+            deleteButton.setTitle("x", for: .normal)
+            deleteButton.setTitleColor(UIColor.black, for: .normal)
+            deleteButton.addTarget(self, action: #selector(deleteContact(_:)), for: UIControlEvents.touchUpInside)
+            
+            stackViewRow.addArrangedSubview(newSwitch)
+            stackViewRow.addArrangedSubview(newName)
+            stackViewRow.addArrangedSubview(deleteButton)
+            
+            stackViewRow.spacing = 20
+            contactsStackView.addArrangedSubview(stackViewRow)
+            indexArray += 1
+        }
+        
+        nameLabel.text = MyCustomTabController.trailName
+        locationLabel.text = MyCustomTabController.trailLocation
+        peopleLabel.text = MyCustomTabController.trailPeople
+        returnTimeLabel.text = MyCustomTabController.trailReturnTime
+        descriptionLabel.text = MyCustomTabController.trailDescription
     }
     
     func setIndex(_ sender: AnyObject) {
@@ -141,6 +162,12 @@ class TrailSafeViewController: UIViewController {
         else{
             return true
         }
+    }
+    
+    func deleteContact(_ sender: UIButton) {
+        let contactIndex = sender.tag
+        MyCustomTabController.contactsData.remove(at: contactIndex)
+        updateUI()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
