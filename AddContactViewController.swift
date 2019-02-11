@@ -26,9 +26,11 @@ class AddContactViewController: UIViewController {
     
 
     @IBAction func submitButton(_ sender: AnyObject) {
-        let contactName = ContactObject(contactName: nameField.text!, contactPhone: phoneField.text!, contactEmail: emailField.text! )
+        var contactName = ContactObject(contactName: nameField.text!, contactPhone: phoneField.text!, contactEmail: emailField.text!, isOn: false)
         
         if contactsIndex >= 0 {
+            let currentSwitchState = MyCustomTabController.contactsData[contactsIndex].isOn
+            contactName.isOn = currentSwitchState
             MyCustomTabController.contactsData[contactsIndex] = contactName
         }
         else {

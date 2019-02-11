@@ -16,6 +16,7 @@
 		8EF8127C220F33D000C6C751 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8127B220F33D000C6C751 /* AddContactViewController.swift */; };
 		8EF8127E220F40CE00C6C751 /* MyCustomTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8127D220F40CE00C6C751 /* MyCustomTabController.swift */; };
 		8EF81280220F8FEB00C6C751 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8127F220F8FEB00C6C751 /* ContactsViewController.swift */; };
+		8EF812822210D7CF00C6C751 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF812812210D7CF00C6C751 /* EditInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8EF8127B220F33D000C6C751 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactViewController.swift; path = ../AddContactViewController.swift; sourceTree = "<group>"; };
 		8EF8127D220F40CE00C6C751 /* MyCustomTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTabController.swift; sourceTree = "<group>"; };
 		8EF8127F220F8FEB00C6C751 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		8EF812812210D7CF00C6C751 /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8E0BADDF220DFF6600F90AC8 /* AppDelegate.swift */,
 				8E0BADE1220DFF6600F90AC8 /* MainViewController.swift */,
 				8E0BADE3220DFF6600F90AC8 /* Main.storyboard */,
+				8EF812812210D7CF00C6C751 /* EditInfoViewController.swift */,
 				8EF8127F220F8FEB00C6C751 /* ContactsViewController.swift */,
 				8EF8127D220F40CE00C6C751 /* MyCustomTabController.swift */,
 				8E0BADF1220E0CA400F90AC8 /* TrailSafeViewController.swift */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0BADF2220E0CA400F90AC8 /* TrailSafeViewController.swift in Sources */,
+				8EF812822210D7CF00C6C751 /* EditInfoViewController.swift in Sources */,
 				8EF8127C220F33D000C6C751 /* AddContactViewController.swift in Sources */,
 				8E0BADE2220DFF6600F90AC8 /* MainViewController.swift in Sources */,
 				8EF8127E220F40CE00C6C751 /* MyCustomTabController.swift in Sources */,
