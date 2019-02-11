@@ -12,6 +12,7 @@ class TrailSafeViewController: UIViewController {
     @IBOutlet weak var trailSafeActivateButton: UISwitch!
     @IBOutlet weak var contactsStackView: UIStackView!
     @IBOutlet weak var addContactButton: UIButton!
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var peopleLabel: UILabel!
