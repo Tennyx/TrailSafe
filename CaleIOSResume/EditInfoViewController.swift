@@ -20,6 +20,10 @@ class EditInfoViewController: UIViewController {
         descriptionField.text = "Description"
         descriptionField.textColor = UIColor.lightGray
         
+        descriptionField.layer.borderColor = UIColor.lightGray.cgColor
+        descriptionField.layer.borderWidth = 0.25;
+        descriptionField.layer.cornerRadius = 5.0;
+        
         nameField.text = MyCustomTabController.trailName
         locationField.text = MyCustomTabController.trailLocation
         peopleField.text = MyCustomTabController.trailPeople
