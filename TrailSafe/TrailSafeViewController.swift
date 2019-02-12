@@ -11,8 +11,9 @@ import UIKit
 class TrailSafeViewController: UIViewController {
     @IBOutlet weak var trailSafeActivateButton: UISwitch!
     @IBOutlet weak var contactsStackView: UIStackView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var addContactButton: UIButton!
-
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var peopleLabel: UILabel!
@@ -29,7 +30,16 @@ class TrailSafeViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true)
         updateUI()
     }
+    override func viewDidLayoutSubviews(){
+        print(self.view.frame.size.height)
+        let contactArraySize = CGFloat(MyCustomTabController.contactsData.count)
+        let baseHeight = self.view.frame.size.height
+        let contactCellSize = self.view.frame.size.height * 0.05
+        let adjustedHeight = baseHeight + (contactArraySize * contactCellSize)
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: adjustedHeight)
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -106,6 +116,7 @@ class TrailSafeViewController: UIViewController {
             
             stackViewRow.spacing = 20
             contactsStackView.addArrangedSubview(stackViewRow)
+            
             indexArray += 1
         }
         
