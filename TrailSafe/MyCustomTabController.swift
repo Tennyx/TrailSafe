@@ -15,14 +15,6 @@ struct ContactObject {
     var isOn = false
 }
 
-struct TrailDataObject {
-    var trailName: String
-    var trailLocation: String
-    var trailPeople: String
-    var trailReturnTime: String
-    var trailDescription: String
-}
-
 class MyCustomTabController: UITabBarController {
     static var contactsData = [ContactObject]()
     static var trailName = ""

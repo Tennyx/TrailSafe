@@ -56,7 +56,7 @@ class TrailSafeViewController: UIViewController {
                 addContactButton.isEnabled = false
             }
             else {
-                errorLabel.text = "Toggle at least 1 contact and fill out trail info."
+                errorLabel.text = "Toggle at least 1 contact and fill out excursion info."
                 trailSafeActivateButton.isOn = false
             }
         }
@@ -107,7 +107,8 @@ class TrailSafeViewController: UIViewController {
             
             deleteButton.tag = indexArray
             deleteButton.setTitle("x", for: .normal)
-            deleteButton.setTitleColor(UIColor.black, for: .normal)
+            deleteButton.setTitleColor(UIColor(red:0.22, green:0.62, blue:0.21, alpha:1.0), for: .normal)
+            deleteButton.setTitleColor(UIColor(red:0.62, green:0.62, blue:0.62, alpha:1.0), for: .disabled)
             deleteButton.addTarget(self, action: #selector(deleteContact(_:)), for: UIControlEvents.touchUpInside)
             
             stackViewRow.addArrangedSubview(newSwitch)
