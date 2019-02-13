@@ -17,9 +17,6 @@ class EditInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionField.text = "Description"
-        descriptionField.textColor = UIColor.lightGray
-        
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         descriptionField.layer.borderWidth = 0.25;
         descriptionField.layer.cornerRadius = 5.0;

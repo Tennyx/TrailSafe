@@ -48,5 +48,4 @@ class AddContactViewController: UIViewController {
             emailField.text = contactObject.contactEmail
         }
     }
-
 }
